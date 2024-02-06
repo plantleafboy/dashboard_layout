@@ -32,10 +32,11 @@ span {
 }
 
 .header {
-    background-color: #1F2937;
+    background-color: #8192a9;
     grid-area: header;
 
     display: grid;
+    grid-template-rows: 1fr 2fr;
 }
 
 .header-top {
@@ -127,4 +128,20 @@ li,
 .nav-container li.settings {
     color: #d14444;
     margin-top: 100px;
+}
+
+.search-icon {
+    width: 16px;
+    height: auto;
+}
+
+.bell-icon {
+    width: 20px;
+}
+
+.search-bar {
+    width: 60%;
+    height: 2em;
+    border: none;
+    border-radius: 14px;
 }
