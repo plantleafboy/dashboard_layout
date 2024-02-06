@@ -243,8 +243,8 @@ div p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     grid-template-rows: repeat(3, 170px);
-    height: 100%;
     gap: 16px;
+
 }   
 
 .card {
@@ -255,6 +255,7 @@ div p {
 
     display: flex;
     flex-direction: column;
+    max-width: 400px;
 
 }
 
