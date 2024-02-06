@@ -24,7 +24,7 @@ span {
     display: grid;
     height: inherit;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 0.9fr 5fr;
     grid-template-areas: 
         "sidebar header"
         "sidebar content";
@@ -32,7 +32,7 @@ span {
 }
 
 .header {
-    background-color: #8192a9;
+    background-color: #ffffff;
     grid-area: header;
 
     display: grid;
@@ -40,11 +40,32 @@ span {
 }
 
 .header-top {
-    border: 1px solid #d14444;
+    /* border: 1px solid #a5f90a; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 14px;
+}
+
+.header-top-form {
+    /* border: 1px solid #ccc; */
+    display: grid;
+    grid-template-columns: 0.2fr 15fr 0.3fr 0.3fr 3fr;
+    grid-template-areas: 
+        "search search-bar notification icon user";
+    gap: 8px;
+    height: inherit;
+    width: 95%;
 }
 
 .header-bottom {
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
+    display: grid;
+    grid-template-columns: 0.7fr 8fr 5fr;
+    align-items: center;
+    width: 90%;
+    align-self: center;
+    justify-self: center;
 }
 
 .sidebar {
@@ -56,9 +77,9 @@ span {
     grid-template-rows: 1fr 8fr;
 }
 
-.side-heading {
-    border: 1px solid #ccc;
-}
+/* .side-heading {
+    /* border: 1px solid #ccc; */
+ */
 
 .navigation {
     border: 1px solid #ccc;
@@ -88,11 +109,10 @@ span {
     background-color: peachpuff;
 }
 
-
 .icon img,
 #header-logo {
-    width: 34px; /* Set your desired width */
-    height: auto; /* Maintain the aspect ratio */
+    width: 34px;
+    height: auto;
     
 }
 
@@ -116,32 +136,97 @@ li,
     row-gap: 10px;
 }
 
-/* ul li:nth-child(n + 7) {
-    
-    color: #d14444;
-} */
-
-/* .nav-container li.settings,
-.nav-container li.privacy,
-.nav-container li.support  */
-
 .nav-container li.settings {
-    color: #d14444;
     margin-top: 100px;
+}
+
+.search-button {
+    grid-area: search;
+    justify-self: flex-start;
 }
 
 .search-icon {
     width: 16px;
     height: auto;
+    
+}
+
+.noti-button {
+    grid-area: notification;
 }
 
 .bell-icon {
-    width: 20px;
+    width: clamp(16px, 2em, 24px);
 }
 
 .search-bar {
-    width: 60%;
+    width: 85%;
     height: 2em;
     border: none;
     border-radius: 14px;
+    padding-left: 8px;
+    grid-area: search-bar;
+    margin-top: 2px;
+    background-color: #e4e1e1;
+}
+
+.search-bar:focus {
+    outline: none;
+}
+
+
+
+button {
+    border: none;
+    background-color: inherit;
+}
+
+.user-logo {
+    width: 32px;
+    height: auto;
+    background-color: beige;
+    padding: 4px;
+    border-radius: 50%;
+    grid-area: icon;
+}
+
+.user-hello {
+    grid-area: user;
+    line-height: 32px;
+}
+
+.user-logo2 {
+    width: 50px;
+    height: auto;
+    background-color: beige;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.bot-subcontainer1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.bot-subcontainer1 p:nth-child(1) {
+    font-weight: bold;
+    font-size: small;
+}
+
+.bot-subcontainer1 p:nth-child(2) {
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
+.bot-subcontainer2 {
+    display: flex;
+    gap: 16px;
+    justify-self: flex-end;
+}
+
+.controls-btt {
+    background-color: #6f52aa;
+    padding: 8px 20px;
+    border-radius: 16px;
+    color: white;
 }
