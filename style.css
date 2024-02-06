@@ -86,19 +86,21 @@ span {
 }
 
 .content {
-    background-color: white;
+    background-color: rgb(210, 204, 204);
     grid-area: content;
     display: grid;
     grid-template: 1fr 1fr / 7fr 3fr;
+    padding: 20px;
+    gap: 14px;
 }
 
 .announcements {
-    border: 1px solid #ccc;
+    border: 1px solid #0e0707;
     grid-area: 1 / 2 / 2 / 3;
 }
 
 .trending {
-    border: 1px solid #ccc;
+    border: 1px solid #080404;
     grid-area: 2 / 2 / 3 / 3;
 }
 
@@ -229,4 +231,15 @@ button {
     padding: 8px 20px;
     border-radius: 16px;
     color: white;
+}
+
+div p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    
 }
