@@ -29,7 +29,6 @@ span {
     grid-template-areas: 
         "sidebar header"
         "sidebar content";
-
 }
 
 .header {
@@ -93,6 +92,7 @@ span {
     grid-template: 1.2fr 1fr / 3fr 1fr;
     padding: 20px;
     gap: 14px;
+    min-width: 900px;
 }
 
 .announcements {
@@ -182,6 +182,10 @@ button {
     background-color: inherit;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .user-logo {
     width: 36px;
     height: auto;
@@ -240,8 +244,8 @@ div p {
 
 .proj-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    grid-template-rows: repeat(3, 170px);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, 1fr);
     gap: 16px;
 
 }   
@@ -251,12 +255,10 @@ div p {
     background: linear-gradient(to right, tomato 10px, white 1px); 
     border-radius: 10px;
     padding: 20px 20px;
-
+    height: 200px;
     display: flex;
     flex-direction: column;
-    max-width: 400px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-
 }
 
 div img {
@@ -295,28 +297,39 @@ li span:nth-child(2):hover {
     font-size: 12px;
     font-weight: lighter;
     color: var(--text-color);
+    border-bottom: 1px solid #8065fb;
+    padding-bottom: 20px;
 }
 
 .ann-container {
     display: flex;
     flex-direction: column;
-    justify-content: space;
+    justify-content: space-evenly;
+    height: 80%;
+}
 
+.ann-container .small-card:last-of-type p {
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
 .trend-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 6% 8px;
+    row-gap: 8px;
+    height: 80%;
 }
 
 .profile-card {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: auto 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
         "icon ign"
         "icon text";
+    column-gap: 6px;
 }
 .profile-card > img {
     width: 36px;
@@ -327,12 +340,11 @@ li span:nth-child(2):hover {
 }
 
 .profile-card p {
-    font-size: 14px;
+    font-size: 1em;
     margin-bottom: 0;
 }
 
 .profile-card p:nth-child(3) {
     font-size: 14px;
     font-weight: lighter;
-    
 }
